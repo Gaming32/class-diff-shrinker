@@ -4,9 +4,8 @@ import com.nothome.delta.Delta;
 import io.github.gaming32.classdiffshrinker.ClassDiffShrinker;
 
 import java.io.IOException;
+import java.io.InputStream;
 import java.lang.invoke.MethodHandles;
-import java.nio.file.Files;
-import java.nio.file.Path;
 
 public class ClassDiffShrinkerTest {
     public static void main(String[] args) throws IOException, ReflectiveOperationException {
@@ -29,6 +28,9 @@ public class ClassDiffShrinkerTest {
     }
 
     private static byte[] read(String path) throws IOException {
-        return Files.readAllBytes(Path.of(path));
+        try (InputStream is = ClassDiffShrinkerTest.class.getResourceAsStream(path)) {
+            assert is != null;
+            return is.readAllBytes();
+        }
     }
 }
