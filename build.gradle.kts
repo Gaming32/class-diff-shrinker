@@ -58,12 +58,12 @@ publishing {
 
             pom {
                 name = project.name
-                description = "A library allowing you to create Python-style generators in Java"
-                url = "https://github.com/Gaming32/j21-generators"
+                description = "Library to make binpatches for Java files smaller and contain less copyrighted code"
+                url = "https://github.com/Gaming32/class-diff-shrinker"
                 licenses {
                     license {
                         name = "MIT License"
-                        url = "https://github.com/Gaming32/j21-generators/blob/main/LICENSE"
+                        url = "https://github.com/Gaming32/class-diff-shrinker/blob/main/LICENSE"
                     }
                 }
                 developers {
@@ -72,9 +72,9 @@ publishing {
                     }
                 }
                 scm {
-                    connection = "scm:git:git://github.com/Gaming32/j21-generators.git"
+                    connection = "scm:git:git://github.com/Gaming32/class-diff-shrinker.git"
                     developerConnection = connection
-                    url = "https://github.com/Gaming32/j21-generators"
+                    url = "https://github.com/Gaming32/class-diff-shrinker"
                 }
             }
         }
