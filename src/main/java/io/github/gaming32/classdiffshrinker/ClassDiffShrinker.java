@@ -30,8 +30,11 @@ import static io.github.dmlloyd.classfile.ClassFile.*;
  * This class contains methods to modify the modified class's constant pool to be in the same order as the original
  * class's constant pool.
  */
-public class ClassDiffShrinker {
+public final class ClassDiffShrinker {
     private static final byte[] EMPTY_ENTRY = {TAG_UTF8, 0, 0};
+
+    private ClassDiffShrinker() {
+    }
 
     /**
      * Modifies the modified class's constant pool to match the original's.
